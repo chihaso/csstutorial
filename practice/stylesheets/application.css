@@ -22,3 +22,111 @@ body {
   box-shadow: rgba(0, 0, 0, .4) 0 0 8px;
   overflow: hidden; // floatを使った場合の対策
 }
+
+/* ---------------ここまで初期設定--------------- */
+/*基準文字サイズ*/
+html{
+  font-size: 16px;
+}
+
+/*サイトタイトル*/
+.header__title{
+  background-color: #999999;
+  height: 138px;
+  line-height: 138px;
+  color: #444444;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+/*ナビゲーションバー*/
+.global-nav__items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-shadow: 0px 4px 2px -2px;
+}
+.global-nav__item a{
+  color: #444444;
+  text-decoration: none;
+}
+.global-nav__item{
+  width: 12.25rem;
+  height: 65px;
+  line-height: 65px;
+  text-align: center;
+}
+.global-nav__item:nth-child(odd){
+  background-color: #CFCFCF;
+}
+.global-nav__item:nth-child(even){
+  background-color: #B4B4B4;
+}
+
+/*パンくず*/
+.bread-crumbs{
+  height: 32px;
+  line-height: 32px;
+  padding: 0 0 0 1.3rem;
+}
+.bread-crumbs__items,.bread-crumbs__item{
+  display: flex;
+}
+.bread-crumbs__item a{
+  color: #FFF;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.bread-crumbs__item:not(:last-child)::after{
+  content: ">";
+  display: block;
+  margin-left: 6px;
+  margin-right: 6px;
+  color: #B4B4B4;
+}
+
+/*上段の広告*/
+.top-ads{
+  background-color: #CCC;
+  box-shadow: 0px -3px 2px -2px;
+}
+.top-ads__items{
+  display: flex;
+  justify-content: space-between;
+  padding:17px 16.25px
+}
+.top-ads__item{
+  background-color: #A0A0A0;
+}
+.top-ads__item img{
+  width: 305px;
+  height: 244px;
+}
+
+/*左側の広告バナーとメイン記事を横並びにする*/
+.body{
+  display: flex;
+  flex-direction: row-reverse;
+}
+main{
+  width: 642px;
+}
+
+/*フッター*/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #444;
+  padding:23px 0
+}
+.footer-nav{
+  width: 560px;
+  display: flex;
+  justify-content: space-around;
+}
+.about-author{
+  background-color: #CCC;
+  display: block;
+  width: 414px;
+}
