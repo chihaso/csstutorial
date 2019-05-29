@@ -9,7 +9,6 @@ html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockqu
 }
 
 body {
-  color: #444;
   background-color: #aaa;
 }
 
@@ -44,7 +43,7 @@ html{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  box-shadow: 0px 4px 2px -2px;
+  box-shadow: 0px 4px 2px -2px #444;
 }
 .global-nav__item a{
   color: #444444;
@@ -80,15 +79,15 @@ html{
 .bread-crumbs__item:not(:last-child)::after{
   content: ">";
   display: block;
-  margin-left: 6px;
-  margin-right: 6px;
+  margin-left: 0.375rem;
+  margin-right: 0.375rem;
   color: #B4B4B4;
 }
 
 /*上段の広告*/
 .top-ads{
   background-color: #CCC;
-  box-shadow: 0px -3px 2px -2px;
+  box-shadow: 0px -3px 2px -2px #444;
 }
 .top-ads__items{
   display: flex;
@@ -99,17 +98,167 @@ html{
   background-color: #A0A0A0;
 }
 .top-ads__item img{
-  width: 305px;
-  height: 244px;
+/*  width: 305px; */
+/*  height: 244px; */
+  width: 19.06em;
+  height: auto;
 }
 
-/*左側の広告バナーとメイン記事を横並びにする*/
+/*左側の広告バナー＆ローカルナビ と メイン記事 を横並びにする*/
 .body{
   display: flex;
   flex-direction: row-reverse;
 }
+
+/*左側の広告バナー＆ローカルナビ*/
+aside{
+  padding: 17px;
+}
+
+/*左側の広告バナー*/
+.aside-ads__items{
+  display: flex;
+  flex-direction: column;
+  align-items: between-space;
+  width: auto;
+}
+.aside-ads__item{
+  padding-bottom: 12px;
+}
+
+/*ローカルナビ*/
+.local-nav{
+  height: 155px;
+  margin-top: 9px;
+  overflow: scroll;
+  border-radius: 8px
+}
+.local-nav__item{
+  height: 43px;
+  line-height: 43px;
+  background-color: #999;
+}
+.local-nav__item:not(:last-child){
+  margin-bottom: 2px;
+}
+.local-nav__item a{
+  color: #FFF;
+  text-decoration: none;
+  padding-left: 18px;
+}
+
+/*メイン記事*/
 main{
+  background-color: #DDD;
   width: 642px;
+}
+/*記事ヘッダ*/
+.main-header{
+  height: 83px;
+  line-height: 83px;
+  background-color: #EEE;
+  box-shadow: 0px 4px 2px -2px #AEAEAE; 
+}
+.main-header__title{
+  font-size: 28px;
+  padding-left: 63px;
+}
+ /* 
+.main-header:before{
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: solid 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px; 
+}
+.main-header__title:after{
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-right: solid 12px;
+}
+*/
+
+/*記事*/
+.article{
+  padding: 0 0 36px 17px;
+  font-size: 15.8px;
+  line-height: 27px;
+}
+.article__title{
+  height: 76px;
+  line-height: 76px;
+  font-size: 27px;
+  padding-left: 42px;
+}
+.article__paragraph{
+  padding-bottom: 20px;
+}
+.article__sub-title{
+  font-size: 25px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 15px;
+}
+.article__sub-sub-title{
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+.article__unorder-list{
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.article__order-list{
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+.article__blockquote{
+  padding: 65px 0 31px 52px;
+}
+article img{
+  width: 100%;
+}
+
+/*お知らせ*/
+.form{
+  background-color: #FFF;
+}
+.form__title{
+  font-size: 23px;
+  height: 69px;
+  line-height: 69px;
+  
+}
+.form-item{
+  width: 100%;
+  padding: 0 26px 23px 0;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 15px;
+}
+.form-item__text-input,.form-item__textarea,.form-item__inline-items,.form-item__select-pull-down,.form-item__select-list,.form-item__file,.form-item__actions{
+  width: 400px;
+}
+.form-item__text-input{
+  height: 30px;
+}
+.form-item__textarea{
+  height: 270px;
+}
+.form-item__inline-items{
+  display: flex;
+}
+.form-item__radio,.form-item__checkbox{
+  display: flex;
+  width: 81px;
+}
+.form-item__actions-items{
+  display: flex;
 }
 
 /*フッター*/
@@ -118,7 +267,7 @@ footer{
   flex-wrap: wrap;
   justify-content: center;
   background-color: #444;
-  padding:23px 0
+  padding:23px 0;
 }
 .footer-nav{
   width: 560px;
